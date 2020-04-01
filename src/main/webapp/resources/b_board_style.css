@@ -1,0 +1,555 @@
+@charset "UTF-8";
+
+/* TOP MENU */
+.menu_top{
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+
+.t_menu {
+	width: 100%;
+	height: 40px;
+	background: #0086b3;
+}
+
+.menus {
+	float: left;
+	color: #fff;
+	width: 14%;
+	line-height: 40px;
+	text-align: center;
+}
+
+.menus a:hover {
+	color: #ffff00;
+}
+
+.column{
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+body {
+	background-color: #eee;
+}
+
+body>.grid {
+	height: 100%;
+}
+
+.image {
+	margin-top: -100px;
+}
+
+.column {
+	max-width: 1000px;
+}
+
+.view_btn {
+	cursor: pointer;
+}
+
+.column span {
+	font-weight: 300;
+	color: #0086b3;
+}
+
+td.del_btn a:hover {
+	color: #80dfff;
+}
+
+td.del_btn a, a.del_btn {
+	color: #007399;
+}
+
+p {
+	text-align: center;
+}
+
+
+
+input.b_con {
+	height: 200px;
+}
+
+.ui.teal.header.btitle {
+	color: #0086b3 !important
+}
+
+.
+.ui.field label {
+	margin: 20px;
+}
+
+p.u_id {
+	margin-left: 40px;
+}
+
+.ui.celled.table tr td.g_price_list {
+	border-left: 1px solid rgba(34, 36, 38, .1);
+	text-align: right;
+}
+
+tr td.g_amount {
+	text-align: center;
+}
+
+.ui .left .icon .input input.g_amount {
+	width: 100px;
+}
+
+a button.s_button {
+	
+}
+
+tr td a.thum_img {
+	width: auto;
+	height: 100px;
+}
+
+img.g_img {
+	width: 500px;
+	height: auto;
+}
+
+/* INDEX 상품보기 -------------- */
+.goods_view a button {
+	width: 100%;
+	height: 40px;
+	background: #cceeff;
+	color: #0088cc;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 1px solid #0088cc;
+	display: block;
+}
+
+.goods_view a button:hover {
+	width: 100%;
+	height: 40px;
+	background: #0088cc;
+	color: #fff;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+/* 썸네일 사이즈 */
+img.g_thum {
+	width: auto;
+	height: 50px;
+}
+
+label {
+	width: 100px;
+	text-align: left;
+	padding: 10px;
+	color: #aaa;
+}
+
+.field input, .field select {
+	width: 300px;
+}
+
+.ui.form select {
+	width: 300px;
+}
+
+.field p.u_id {
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	text-align: left;
+	line-height: 2.5;
+}
+
+/* .field p.text_content {
+	height: 200px;
+} */
+
+/* 상품사용후기 --------*/
+form.f_reply {
+	width: 100%
+}
+
+form.f_reply .input_area h2 {
+	width: 100%
+}
+
+form.f_reply .input_area textarea {
+	width: 80%;
+	float: left;
+	padding: 10px;
+}
+
+form.f_reply .input_area button {
+	width: 18%;
+	height: 50%;
+	float: right;
+}
+
+/* ------ 후기댓글 -------- */
+section.replyList li {
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+	line-height: 80px;
+}
+
+.userInfo span.u_id, .date {
+	float: left;
+	padding: 0 10px;
+	width: 15%;
+}
+
+.userInfo span.u_id {
+	width: 15%;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.replyContent {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+.replyFooter {
+	width: 20%;
+	float: left;
+}
+
+button.modify, button.delete {
+	width: 50px;
+	height: 30px;
+	background: #fff;
+	color: #111;
+	border: 1px solid #ccc;
+	padding: 0 10px;
+}
+
+/* -- 댓글  모달 -------- */
+div.replyModal {
+	position: relative;
+	z-index: 1;
+	display: none;
+}
+
+div.modalBackground {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: -1;
+}
+
+div.modalContent {
+	position: fixed;
+	top: 20%;
+	left: calc(50% - 250px);
+	width: 500px;
+	height: 240px;
+	padding: 20px 10px;
+	background: #fff;
+	border: 2px solid #666;
+	border-radius: 10px;
+}
+
+div.modalContent textarea {
+	font-size: 16px;
+	font-family: '맑은 고딕', verdana;
+	padding: 10px;
+	width: 460px;
+	height: 160px;
+	margin-left: 10px;
+}
+
+div.modalContent .button {
+	text-align: center;
+}
+
+div.modalContent button {
+	font-size: 14px;
+	padding: 5px 10px;
+	margin: 10px 0;
+	background: #fff;
+	border: 1px solid #ccc;
+	width: 60px;
+	height: 30px;
+}
+
+div.modalContent button.modal_cancel {
+	margin-left: 20px;
+}
+
+ul.delCeck {
+	width: 100%;
+	padding: 40px 0;
+	display: block;
+}
+
+ul.delCeck li {
+	width: 100%;
+}
+
+ul.delCeck li .allCheck {
+	width: 150px;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+}
+
+ul.delCeck li .allCheck input {
+	line-height: 30px;
+	height: 30px;
+}
+
+ul.delCeck li .allCheck label {
+	line-height: 30px;
+	height: 60px;
+}
+
+ul.delCeck li .delBtn button {
+	width: 100px;
+	height: 30px;
+	border: 1px solid #ddd;
+	float: left;
+}
+
+/* 상품목록 장바구니 목록 버튼 ---*/
+.home_btn {
+	width: 100%;
+	height: 40px;
+	float: right;
+	margin-bottom: 100px;
+	border-top: 1px solid #ddd;
+}
+
+ button.cartlist_btn {
+	width: 120px;
+	height: 40px;
+	border: 0;
+	border-radius: 6px;
+	float: right;
+	margin-right: 5px;
+	font-size: 14px;
+	background: #1ab6ff;
+	color: #fff;
+	margin-top: 10px;
+}
+
+ button.cartlist_btn:hover {
+	background: #b3edff;
+	border: 2px sloid #1ab6ff;
+	font-weight: bold;
+	color: #1ab6ff;
+}
+
+.admin_btn {
+	padding: 5px;
+}
+
+a button.admin_btn {
+	margin-top: 10px;
+	float: left;
+}
+
+/* 총합계 주문정보 ---------*/
+.listResult {
+	height: 100px;
+	line-height: 50px;
+	padding: 20px 0;
+}
+
+.listResult .sum b {
+	color: #DA2222;
+	font-size: 22px;
+}
+
+.listResult_admin .sum {
+	float: right;
+	font-size: 20px;
+	padding: 10px;
+}
+
+.listResult_admin .sum b {
+	color: #DA2222;
+	font-size: 24px;
+}
+
+.listResult .orderOpen {
+	float: right;
+}
+
+.listResult .orderOpen button {
+	width: 200px;
+	height: 40px;
+	background: #EAEAEA;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	font-size: 18px
+}
+
+/* 주문 정보 ----------*/
+.orderInfo {
+	border: 1px solid #ccc;
+	padding: 60px;
+	margin-bottom: 20px;
+}
+
+.orderInfo form .inputArea {
+	height: 40px;
+	text-align: left;
+	margin-bottom: 10px;
+	width: 100%;
+}
+.orderInfo form .inputArea .addr_area1 {
+	width: 100%;
+	height: 40px;
+	text-align: left;
+	margin-bottom: 10px;
+	
+}
+
+.orderInfo form .inputArea .addr_area2 {
+	width: 100%;
+	height: 40px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.orderInfo form .inputArea #sample2_postcode{
+	width: 300px;
+	height: 40px;
+	text-align: left;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	margin-right: 10px;
+}
+
+.orderInfo form .addr_area2 #sample2_address{
+	width: 300px;
+	height: 40px;
+	float: left;
+	border: 1px solid #ccc;
+}
+.orderInfo form .addr_area2 #sample2_detailAddress{
+	width: 300px;
+	height: 40px;
+	float: left;
+	margin-left: 10px;
+	border: 1px solid #ccc;
+}
+#sample2_extraAddress{
+	border: 0;
+	display: block;
+}
+
+.orderInfo form .inputArea label {
+	width: 120px;
+	margin-right: 20px;
+	font-size: 14px;
+	float: left;
+}
+.orderInfo form .inputArea input {
+	font-size: 14px;
+	border: 1px solid #ccc;
+	width: 100px;
+	height: 40px;
+	float: left;
+}
+.orderInfo form .inputArea input.order_input {
+	font-size: 14px;
+	border: 1px solid #ccc;
+	width: 400px;
+	float: left;
+}
+
+.orderInfo form .inputArea input#u_Addr2, .orderInfo form .inputArea input#u_Addr3
+	{
+	width: 600px;
+}
+
+.orderInfo form .orderBTN {
+	width: 100%;
+	height: 40px;
+}
+
+.orderInfo form .orderBTN button {
+	width: 100px;
+	height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	
+}
+
+.orderInfo form .orderBTN button:hover {
+	color: #fff;
+	background: #aaa;
+}
+
+/* 주문 목록 페이지 --------------*/
+table thead tr td a {
+	color: #1ab6ff;
+}
+
+table thead tr td.goods_price {
+	color: #333;
+	font-weight: bold;
+}
+
+/* 주문상태 버튼 ---------------*/
+ button.deli_btn {
+	width: 100px;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	float: right;
+	margin-right: 5px;
+	font-size: 14px;
+	background: #fff;
+	color: #111;
+	margin-bottom: 50px;
+}
+
+#orderList td.pro_state{
+	color: #b3b3b3;
+	font-weight: bold;
+}
+
+#orderInfo td.pro_state{
+	color: #1ab6ff;
+	font-weight: bold;
+}
+.addCart_btn{
+	border: 1px solid red;
+	color: red;
+	border-radius: 20px;
+	margin: 50px;
+	width: 100%;
+}
+
+.sold_out{
+	border: 1px solid red;
+	height: 40px;
+	line-height: 40px;
+	color: red;
+	border-radius: 10px;
+	margin: 50px;
+}
+
+.sold_out_thum{
+	color: red;
+	text-align: center;
+}
+
+
+
+
