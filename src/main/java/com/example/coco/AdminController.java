@@ -72,15 +72,36 @@ public class AdminController {
 	
 	
 	
+	
 	//상품  전채 소감 전체 댓글 출력
-	@RequestMapping(value = "/allReply", method = RequestMethod.GET)
-	public void getAllReply(Model model) throws Exception{
-		logger.info("get All Reply List ----------ADMIN ");
+		@RequestMapping(value = "/allReply", method = RequestMethod.GET)
+		public void getAllReply(Model model) throws Exception{
+			logger.info("get All Reply List ----------ADMIN ");
+			
+			List<replyListDTO> list = aService.allReply();
+			
+			model.addAttribute("list", list);
+		}
 		
-		List<replyListDTO> replyAll = aService.allReply();
-		
-		model.addAttribute("replyAll", replyAll);
-	}
+	//상품  전채 소감 전체 댓글 출력
+//	@RequestMapping(value = "/allReply", method = RequestMethod.GET)
+//	public void getlistReply(Model model, @RequestParam("num") int num) throws Exception{
+//		logger.info("get All Reply List page ----------ADMIN ");
+//		
+//		int count = aService.reCount();
+//		int postNum = 8;
+//		int pageNum2 = (int) Math.ceil((double) count / postNum);
+//		int displayPost = (num - 1) * postNum;
+//		
+//		List<replyListDTO> list = null;
+//		list = aService.listReply(displayPost, postNum);
+//		
+//		model.addAttribute("list", list);
+//		model.addAttribute("pageNum2", pageNum2);
+//	}
+	
+	
+	
 	
 	
 //	@RequestMapping(value = "/allReply", method = RequestMethod.POST)
@@ -102,7 +123,7 @@ public class AdminController {
 	
 	
 	
-	
+
 	
 	
 	

@@ -64,12 +64,31 @@
         ORDER BY g.g_no DESC
 	</select>
 	
+	<select id="listReply" parameterType="HashMap" resultType="com.example.dto.replyListDTO">
+		SELECT r.g_no, r.u_Id, r.reNum, r.reCon, r.reDate, u.u_id, g.g_name
+     	   FROM g_reply r
+        INNER JOIN user u
+       		ON r.u_Id = u.u_id
+       	 INNER JOIN goods g
+       		ON r.g_no = g.g_no
+        ORDER BY g.g_no DESC
+        limit
+		#{displayPost}, #{postNum}
+	</select>
+	<!-- 게시물 총 갯수 -->
+	<select id="reCount" resultType="int">
+		select count(g_no) from g_reply
+	</select>
+	
+	
 	<!-- 소감댓글 삭제 -->
 	<delete id="deleteAllReply">
 		DELETE FROM g_reply
 		WHERE reNum = #{reNum}
 	</delete>
 
+	
+	
 
 
 

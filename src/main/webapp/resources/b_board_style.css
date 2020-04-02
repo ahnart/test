@@ -499,12 +499,15 @@ a button.admin_btn {
 table thead tr td a {
 	color: #1ab6ff;
 }
-
-table thead tr td.goods_price {
-	color: #333;
-	font-weight: bold;
+table tbody tr td a {
+	color: #4080bf;
 }
 
+ .ui.table td.goods_price {
+     padding: 1.2em 0.5em;
+     text-align: right;
+     color: red;
+ }
 /* 주문상태 버튼 ---------------*/
  button.deli_btn {
 	width: 100px;
@@ -519,11 +522,13 @@ table thead tr td.goods_price {
 	margin-bottom: 50px;
 }
 
-#orderList td.pro_state{
-	color: #b3b3b3;
-	font-weight: bold;
-}
-
+ .ui.table td.pro_state {
+     padding: .78571429em .78571429em;
+     text-align: center;
+     color: #111;
+	 font-weight: bold;
+ }
+ 
 #orderInfo td.pro_state{
 	color: #1ab6ff;
 	font-weight: bold;
@@ -550,6 +555,19 @@ table thead tr td.goods_price {
 	text-align: center;
 }
 
+/* page Number ------------*/
+.page_Num{
 
-
+	height: 50px;
+	margin-top: 20px;
+}
+span a.pageNum{
+	font-size: 14px;
+	color: #4080bf;
+	margin-left:10px;
+	box-sizing: border-box;
+}
+span a.pageNum:hover{
+	color: #ffff00;
+}
 

@@ -52,8 +52,12 @@ public interface adminDAO {
 	
 	//상품 전체 소감 댓글 확인
 	public List<replyListDTO> allReply() throws Exception;
+	//상품 전체 소감 댓글 페이지
+	public List<replyListDTO> listReply(int displayPost, int postNum) throws Exception;	
+	// 전체소감 댓글 갯수
+	public int reCount() throws Exception;
 	
-	//상품 소감 댓글
+	//상품 소감 댓글 삭제
 	public void deleteReply(int reNum) throws Exception;
 	
 	

@@ -33,7 +33,7 @@ public class adminDAOImpl implements adminDAO {
 		// 상품리스트 보기
 		return sqlSession.selectList(Namespace + ".g_list");
 	}
-
+	
 	@Override
 	public void gDelete(goodsDTO goodsDTO) throws Exception {
 		// 상품 게시물 삭제
@@ -67,7 +67,35 @@ public class adminDAOImpl implements adminDAO {
 
 		return sqlSession.selectList(Namespace + ".listPage", data);
 	}
-
+	
+	
+	@Override
+	public List<replyListDTO> allReply() throws Exception {
+		// 전체 댓글 보기
+		return sqlSession.selectList(Namespace + ".allReply");
+	}
+	@Override
+	public List<replyListDTO> listReply(int displayPost, int postNum) throws Exception {
+		// 전체 소감 댓글 확인
+		HashMap<String, Integer> data = new HashMap<String, Integer>();
+		data.put("displayPost", displayPost);
+		data.put("postNum", postNum);
+		
+		return sqlSession.selectList(Namespace + ".listReply", data);
+	}
+	@Override
+	public int reCount() throws Exception {
+		// 상품 전체 소감 댓글 갯수
+		return sqlSession.selectOne(Namespace + ".reCount");
+	}
+	
+	@Override
+	public void deleteReply(int reNum) throws Exception {
+		// 상품 전체 소감 댓글 삭제
+		sqlSession.delete(Namespace + ".deleteAllReply", reNum);
+		
+	}
+	
 	@Override
 	public List<categoryDTO> category() throws Exception {
 		// 상품 카테고리 조인
@@ -98,17 +126,10 @@ public class adminDAOImpl implements adminDAO {
 		sqlSession.update(Namespace + ".changeStock", goods);
 	}
 
-	@Override
-	public List<replyListDTO> allReply() throws Exception {
-		// 상품 전체 소감 댓글 확인
-		return sqlSession.selectList(Namespace + ".allReply");
-	}
+	
 
-	@Override
-	public void deleteReply(int reNum) throws Exception {
-		// 상품 전체 소감 댓글 삭제
-		sqlSession.delete(Namespace + ".deleteAllReply", reNum);
-		
-	}
+	
+
+	
 
 }

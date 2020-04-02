@@ -75,7 +75,7 @@ a.thum_img img {
 
 
 							<c:forEach begin="1" end="${pageNum}" var="num">
-								<span> <a class="del_btn" href="/user/goods_list?num=${num}">${num}</a>
+								<span> <a class="pageNum" href="/user/goods_list?num=${num}">${num}</a>
 								</span>
 							</c:forEach>
 

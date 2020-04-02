@@ -47,9 +47,12 @@ public interface adminService {
 	//상품 수량 조절
 	public void changeStock(goodsDTO goods) throws Exception;
 	
-	
 	//상품 전체 소감댓글 확인
 	public List<replyListDTO> allReply() throws Exception;
+	//상품 전체 소감댓글 page
+	public List<replyListDTO> listReply(int displayPost, int postNum) throws Exception;
+	// 전체소감 댓글 갯수
+	public int reCount() throws Exception;
 	
 	//상품 전체 댓글 삭제
 	public void deleteReply(int reNum) throws Exception;

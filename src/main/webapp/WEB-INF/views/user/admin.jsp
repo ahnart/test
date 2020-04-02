@@ -75,7 +75,7 @@ a.thum_img img {
 								<a href="/user/admin/orderList" class="ui fluid large teal submit button  ">주문 현황 관리 </a>
 								</div>
 								<div class="cartlist_btn admin_btn">
-								<a href="/user/admin/allReply" class="ui fluid large teal submit button  ">전체 상품 소감 </a>
+								<a href="/user/admin/allReply?num=1" class="ui fluid large teal submit button  ">전체 상품 소감 </a>
 								</div>
 								<div class="cartlist_btn admin_btn">
 								<a href="/" class="ui fluid large teal submit button  ">홈으로</a>

@@ -40,7 +40,7 @@
 	<!-- 업로드 패스 설정 -->
 	<bean class="java.lang.String" id="uploadPath">
 		<constructor-arg
-			value="D:\2020_JAVA\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring_EX_02_0327\resources" />
+			value="D:\2020_JAVA\Spring_EX_02_0327\src\main\webapp\resources" />
 	</bean>
 	<bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		id="multipartResolver">

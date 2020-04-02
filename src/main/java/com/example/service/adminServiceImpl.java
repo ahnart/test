@@ -93,18 +93,34 @@ public class adminServiceImpl implements adminService {
 		// 상품 수량 조절
 		aDao.changeStock(goods);
 	}
-
+	
 	@Override
 	public List<replyListDTO> allReply() throws Exception {
-		// 상품 전채 소감 댓글 확인
+		// 전체 소감 댓글 리스트
 		return aDao.allReply();
 	}
-
+	@Override
+	public List<replyListDTO> listReply(int displayPost, int postNum) throws Exception {
+		// 상품 전채 소감 페이징
+		return aDao.listReply(postNum, postNum);
+	}
+	
+	@Override
+	public int reCount() throws Exception {
+		// 상품 전채 소감 댓글 삭제
+		return aDao.reCount();
+	}
+	
+	
 	@Override
 	public void deleteReply(int reNum) throws Exception {
 		// 상품 소감 댓글 전채 삭제
 		aDao.deleteReply(reNum);
 	}
+
+	
+
+	
 	
 	
 }

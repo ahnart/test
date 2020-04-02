@@ -37,14 +37,28 @@
 		#{g_thum}, #{g_amount})
 	</insert>
 
-	<select id="g_list" resultType="goodsDTO">
+	<!-- <select id="g_list" resultType="goodsDTO">
 		select
 		g_no, g_name, g_price, g_content, g_date, g_img, g_thum, g_amount
 		from goods
 		order by g_no DESC;
+	</select> -->
+	<select id="listPage" parameterType="HashMap" resultType="goodsDTO">
+		select
+		g_no, g_name, g_price,
+		g_content, g_date, g_thum, g_amount
+		from goods
+		order by
+		g_no DESC
+		limit
+		#{displayPost}, #{postNum}
 	</select>
-
-
+	<!-- 게시물 총 갯수 -->
+	<select id="count" resultType="int">
+		select count(g_no) from goods
+	</select>
+	
+	
 	<delete id="gDelete">
 		delete from goods where g_no = #{g_no}
 	</delete>
@@ -73,23 +87,10 @@
 		#{g_no}
 	</update>
 
-	<!-- 게시물 총 갯수 -->
-	<select id="count" resultType="int">
-		select count(g_no) from goods
-	</select>
+	
 
-	<select id="listPage" parameterType="HashMap" resultType="goodsDTO">
-		select
-		g_no, g_name, g_price,
-		g_content, g_date, g_thum, g_amount
-		from goods
-		order by
-		g_no DESC
-		limit
-		#{displayPost}, #{postNum}
-
-	</select>
-	<!-- 카테고리 -->
+	
+	
 
 	
 	
